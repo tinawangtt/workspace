@@ -50,3 +50,24 @@
     - 删除远程库
     - 先查看 git remote -v
     -  再取消关联 git remote rm origin
+12. 分支的创建与切换
+     - 创建并切换分支
+      ```
+      git switch -c dev
+      ```
+    - 查看分支
+     ```
+     git branch
+     ```
+    - 切换到主分支
+     ```
+     git switch master
+     ```
+    - 合并某分支到当前分支
+    ```
+    git merge <分支名>
+    ```
+    - 删除分支
+    ```
+    git branch -d <name>
+    ```
