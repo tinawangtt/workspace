@@ -22,6 +22,31 @@
        git restore --staged readme.md 
 
     3. 从master同时恢复工作区和暂存区
-
+       ```
        git restore --source=HEAD --staged --worktree readme.txt
+       ```
+10. 删除文件 
+     - 先在本地删除，使用git status 能看到状态
+     - 然后使用 git rm readme.txt 彻底删除
 
+11. 远程仓库
+    - 首先要创建SSH key ,windows下打开Git Bash
+       ```
+       ssh-keygen -t rsa -C "youremail@example.com"
+        ``` 
+      自己项目一般不用输入密码，一路enter，会在用户目录下的.ssh目录下有 id_rsa(私钥)  id_rsa.pub(公钥)
+    - 登录github 打开Account settings ,"SSG Keys"中添加id_rsa.pub里面的内容
+    - 创建一个仓库 例如 workspace
+     ```  
+     git remote add origin git@github.com:youraccount/workspace.git 
+     ```
+     ``` 
+     git push -u origin master
+     ```
+     以后只要本地做了提交，就可以通过下面命令提交
+     ```
+     git push origin master
+     ```
+    - 删除远程库
+    - 先查看 git remote -v
+    -  再取消关联 git remote rm origin
