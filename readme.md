@@ -105,3 +105,10 @@
 
 16. 有些文件不想提交到github，不想老是提示，忽略特殊文件
     - https://github.com/github/gitignore   
+    - 添加文件失败，查找问题 -> git check-ignore -v <文件名>
+17. 防丢 https://liaoxuefeng.gitee.io/resource.liaoxuefeng.com/git/git-cheat-sheet.html#
+18. git 的简单配置
+     - 
+   - ```
+      git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" 
+      ```
