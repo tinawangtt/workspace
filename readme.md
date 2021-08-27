@@ -71,5 +71,9 @@
     ```
     git branch -d <name>
     ```
+    - 查看分支合并情况
+    ```
+     git log --graph --pretty=oneline --abbrev-commit
+    ```
 
-
+### 接着测试
