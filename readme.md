@@ -80,4 +80,16 @@
      git log --graph --pretty=oneline --abbrev-commit
     ```
 
+14. 临时创建bug分支修复
+    - 保护现场 ```git stash```
+    - 根据某个分支创建issue分支，修改后提交合并再删除issue分支
+    - 回到刚刚切换出去的分支，查找现场 ```git stash list```
+    - 恢复现场 ``` git stash pop```
+    - 如果多次保存现场，恢复的时候 ```git stash apply stash@{0} ``` ```git stash drop ```
+    - 如果要把修改的bug合并到现在这个分支 ``` git cherry-pick  <commitid>```
 
+15. down github上项目 ``` git clone git@github.com:tinawangtt/workspace.git ```
+    - 这种情况下只能拉到master分支 
+    - 远程dev到本地 ``` git checkout -b dev origin/dev```
+    - ``` git pull ``` //更新
+    - ``` git branch --set-upstream-to=origin/dev dev ``` 设置dev和origin/dev的链接
