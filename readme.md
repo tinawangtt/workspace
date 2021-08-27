@@ -63,9 +63,13 @@
      ```
      git switch master
      ```
-    - 合并某分支到当前分支
+    - 合并某分支到当前分支（fast forward看不出曾经做过合并）
     ```
     git merge <分支名>
+    ```
+    - 合并，禁用fast forward,可以看出合并的log
+    ```
+    git merge --no-ff -m "log" <分支名>
     ```
     - 删除分支
     ```
@@ -76,4 +80,4 @@
      git log --graph --pretty=oneline --abbrev-commit
     ```
 
-### 接着测试
+
