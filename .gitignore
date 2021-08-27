@@ -17,5 +17,6 @@
 .*
 go-gin-example
 leetcode
+multidownload
 #不排除的文件
 !.gitignore

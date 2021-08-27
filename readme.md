@@ -49,7 +49,7 @@
      ```
     - 删除远程库
     - 先查看 git remote -v
-    -  再取消关联 git remote rm origin
+    - 再取消关联 git remote rm origin
 12. 分支的创建与切换
      - 创建并切换分支
       ```
@@ -93,3 +93,15 @@
     - 远程dev到本地 ``` git checkout -b dev origin/dev```
     - ``` git pull ``` //更新
     - ``` git branch --set-upstream-to=origin/dev dev ``` 设置dev和origin/dev的链接
+
+15. 打标签
+    - git tag <tagname>  用于新建一个标签，默认为HEAD，也可以指定一个commit id
+    - 命令git tag -a <tagname> -m "blablabla..."可以指定标签信息
+    - 命令git tag可以查看所有标签。
+    - git tag -d v0.1  删除标签
+    - git push origin <v1.0>  推送标签到远程
+    - git push origin --tags   一次性推送所以标签
+    - 删除远程标签，先删除本地，然后  git push origin :refs/tags/<v0.9>
+
+16. 有些文件不想提交到github，不想老是提示，忽略特殊文件
+    - https://github.com/github/gitignore   
