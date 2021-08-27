@@ -71,3 +71,5 @@
     ```
     git branch -d <name>
     ```
+
+  Creating a new branch is quick & simple.
